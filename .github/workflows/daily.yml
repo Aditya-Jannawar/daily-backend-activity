@@ -2,8 +2,11 @@ name: Daily Backend Activity
 
 on:
   schedule:
-    - cron: "30 4 * * *"   # Runs daily at 10:00 AM IST
+    - cron: "30 4 * * *"   # 10:00 AM IST
   workflow_dispatch:
+
+permissions:
+  contents: write   # 👈 THIS IS THE FIX
 
 jobs:
   auto-commit:
